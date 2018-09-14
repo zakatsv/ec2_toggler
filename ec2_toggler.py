@@ -26,7 +26,7 @@ import time
 ins_id = 'i-0ea7e0158c98e3765'
 
 cli_get_status = "aws ec2 describe-instance-status --include-all-instances --instance-id " + ins_id
-cli_get_tag = "aws ec2 describe-tags --filters \"Name=resource-id,Values=" + ins_id + ",Name=key,Values=work_hours\""
+cli_get_tag = "aws ec2 describe-tags --filters \"Name=resource-id,Values=" + ins_id + "\" \"Name=key,Values=work_hours\""
 cli_start_ins = "aws ec2 start-instances --instance-ids " + ins_id
 cli_stop_ins = "aws ec2 stop-instances --instance-ids " + ins_id
 
